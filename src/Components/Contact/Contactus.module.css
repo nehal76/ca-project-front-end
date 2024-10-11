@@ -1,0 +1,84 @@
+/* General container styling for the contact page */
+.app-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #000; /* Black background for the container */
+    color: #fff; /* White text color */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #f48b45; /* White background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 300px; /* Fixed width for the card */
+    position: relative; /* For positioning pseudo-elements */
+    overflow: hidden; /* Ensure no content spills out */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    margin: 10px; /* Spacing between cards */
+  }
+  
+  /* Card header styling */
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  /* Card content styling */
+  .card-content {
+    font-size: 16px;
+    line-height: 1.5;
+    transition: transform 0.3s ease; /* Smooth transition for content */
+  }
+  
+  /* Hover effect for cards */
+  .card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0px 0px 15px rgba(144, 238, 144, 0.7); /* Light green shadow around all sides on hover */
+  }
+  
+  /* Hover effect for specific elements inside cards */
+  .card:hover .card-content {
+    transform: scale(1.05); /* Slightly scale up content on hover */
+  }
+  
+  /* Pop-up effect for email and contact number */
+  .card-content b {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    color: #000;
+  }
+  
+  /* Specific hover effects for each card */
+  .card:nth-of-type(1):hover .card-content b:first-of-type {
+    transform: translateY(-10px); /* Move up on hover */
+    color: #007bff; /* Optional color change */
+  }
+  
+  .card:nth-of-type(2):hover .card-content b:last-of-type {
+    transform: translateY(-10px); /* Move up on hover */
+    color: #007bff; /* Optional color change */
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .app-container {
+      justify-content: center; /* Center cards on smaller screens */
+    }
+  
+    .card {
+      width: 100%; /* Full-width cards on mobile screens */
+      max-width: 500px; /* Optional max-width for smaller screens */
+    }
+  }
+  

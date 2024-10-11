@@ -1,0 +1,52 @@
+/* Add this to your CSS file */
+
+/* Footer.module.css */
+
+/* WhatsApp button styling */
+.btnWhatsApp {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnWhatsApp:hover {
+  background-color: #1ebea5;
+}
+
+/* Footer WhatsApp container styling */
+.footerWhatsApp {
+  padding: 0;
+  margin: 0;
+  padding-top: 3%;
+}
+
+/* Image styling */
+.image1 {
+  width: 200px;
+  height: 550px;
+}
+
+/* WhatsAppButton.module.css */
+.btnWhatsApp {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnWhatsApp:hover {
+  background-color: #1ebea5;
+}

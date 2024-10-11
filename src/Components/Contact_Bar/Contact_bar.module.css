@@ -1,0 +1,92 @@
+.contactBar {
+  background-color: #464545; /* Dark background for the contact bar */
+  padding: 10px 5%; /* Padding to scale with screen size */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between social icons and contact info */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.socialIcons {
+  display: flex; /* Flexbox for social icons */
+  flex-grow: 1; /* Allow social icons to stretch */
+  justify-content: flex-start; /* Align icons to the left */
+  gap: 10px; /* Space between icons */
+}
+
+.socialIcons a {
+  color: #fff; /* Icon color */
+  font-size: 20px; /* Font size for icons */
+  padding: 5px; /* Padding for icons */
+  border: 1px solid #fff; /* Border for icons */
+  border-radius: 3px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.socialIcons a:hover {
+  background-color: #fff; /* Background color on hover */
+  color: #464545; /* Text color on hover */
+}
+
+.contactInfo {
+  display: flex; /* Flexbox for contact info */
+  align-items: center; /* Center items vertically */
+  flex-grow: 2; /* Allow contact info to grow more than social icons */
+  justify-content: flex-end; /* Align items to the right */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 20px; /* Space between contact items */
+}
+
+.contactItem {
+  color: #fff; /* Text color for contact items */
+  font-size: 16px; /* Font size for contact items */
+  display: flex; /* Flexbox for contact items */
+  align-items: center; /* Center items vertically */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.contactItem svg {
+  margin-right: 5px; /* Space between icon and text */
+  font-size: 18px; /* Size of icons */
+}
+
+.contactItem:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 1024px) {
+  .contactBar {
+    padding: 20px 5%; /* Increase padding for medium screens */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align on smaller screens */
+  }
+
+  .socialIcons {
+    justify-content: center; /* Center icons on smaller screens */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .contactInfo {
+    justify-content: center; /* Center contact info on smaller screens */
+  }
+
+  .contactItem {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contactBar {
+    padding: 30px 5%; /* Further increase padding for smaller screens */
+  }
+
+  .socialIcons a {
+    font-size: 18px; /* Reduce icon size for small screens */
+    padding: 4px; /* Reduce padding for icons */
+  }
+
+  .contactItem {
+    font-size: 12px; /* Reduce font size for very small screens */
+  }
+}

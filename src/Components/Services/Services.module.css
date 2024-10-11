@@ -1,0 +1,65 @@
+.container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Grid system using Flexbox */
+  .cardGrid {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to a new row if needed */
+    justify-content: space-between; /* Space between cards */
+    gap: 20px; /* Space between cards */
+  }
+  
+  /* Card styles */
+  .card {
+    flex: 1 1 calc(25% - 20px); /* Adjust to 4 columns, minus gap */
+    border: 1px solid #ddd; /* Light border for the card */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center text in cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Make the cards stretch across on smaller screens */
+  @media (max-width: 1024px) {
+    .card {
+      flex: 1 1 calc(33.333% - 20px); /* 3 columns for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* 2 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      flex: 1 1 100%; /* Full width cards on mobile */
+    }
+  }
+  
+  /* Optional hover effect */
+  .card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(24, 206, 72, 0.2); /* Darker shadow on hover */
+  }
+  
+  /* Card title styles */
+  .cardTitle {
+    font-size: 1.0em; /* Adjust title size */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 10px; /* Space below the title */
+  }
+  
+  /* Card text styles */
+  .cardText {
+    font-size: 0.9em; /* Smaller text size for descriptions */
+    color: #555; /* Text color */
+    line-height: 1.5; /* Line height for readability */
+  }
+  

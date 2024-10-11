@@ -1,0 +1,503 @@
+/* CSS for Navbar ------->>>>>>>>*/
+/* Header.css */
+
+.sticky-navbar {
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  background-color: white; /* Ensures the background is visible */
+  z-index: 1000; /* Makes sure it stays above other content */
+  border-bottom: 1px solid #ddd; /* Optional: Adds a bottom border */
+}
+
+/* Example styling for the logo */
+.logo {
+  height: 40px; /* Adjust the size of the logo */
+  width: auto;
+}
+
+/* Ensure the body or parent container has appropriate padding/margin */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.logo {
+  margin: auto;
+  padding: 0px;
+  width: 100px;
+  height: 80px;
+}
+/* footer CSS */
+
+/* Add this to your CSS file */
+/* Ensure link styling for black color */
+/* Default link color and styles */
+/* Footer links default styling */
+.footer a {
+  color: black; /* Default link color */
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* For positioning the pseudo-element */
+  display: inline-block; /* Ensure the element only takes up as much space as needed */
+}
+
+/* Underline effect using pseudo-element */
+.footer a::before {
+  content: ""; /* No text content */
+  position: absolute; /* Position absolutely relative to the link */
+  bottom: 0; /* Position at the bottom of the link */
+  left: 0; /* Start the pseudo-element at the start of the link */
+  height: 2px; /* Thickness of the underline */
+  width: 100%; /* Cover the full width of the link */
+  background: transparent; /* Start with a transparent background */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  transform: scaleX(0); /* Initially scale the pseudo-element to 0 width */
+  transform-origin: left; /* Origin for scaling is from the left */
+}
+
+/* Show the underline with color on hover/focus */
+.footer a:hover::before,
+.footer a:focus::before {
+  background-color: #25d366; /* WhatsApp color for the underline */
+  transform: scaleX(1); /* Scale the pseudo-element to full width */
+}
+
+/* Keep the text color unchanged on hover/focus */
+.footer a:hover,
+.footer a:focus {
+  color: black;
+}
+
+/* WhatsApp button styling */
+.btn-whatsapp {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: #25d366; /* WhatsApp green */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebea5;
+}
+
+/* Footer WhatsApp container styling */
+.footer-whatsapp {
+  padding-top: 3%;
+}
+
+/* Flex container styling */
+.text-spacing {
+  display: flex;
+  column-gap: 0;
+}
+
+/* Responsive image styling */
+.image_1 {
+  width: 100%; /* Make the image responsive */
+  max-width: 200px; /* Set a maximum width */
+  height: auto; /* Make the height adjust automatically */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-whatsapp {
+    padding-top: 1rem;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px; /* Increase button text size for smaller screens */
+  }
+
+  .image_1 {
+    max-width: 100px; /* Adjust image size on smaller screens */
+  }
+
+  .text-spacing {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+  }
+
+  .nav {
+    padding-left: 0;
+  }
+
+  .footer a {
+    font-size: 1.1rem; /* Increase font size for links on mobile */
+  }
+}
+
+/* Extra small screen styles */
+@media (max-width: 576px) {
+  .footer {
+    text-align: center; /* Center everything on smaller screens */
+  }
+
+  .footer-whatsapp {
+    padding-top: 0.5rem;
+  }
+
+  .btn-whatsapp {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .image_1 {
+    width: 80px;
+  }
+}
+
+
+
+/* Contact_Bar CSS ---------------------------->>>>>>>>>>>>>>>>>>>>>*/
+
+.contact-bar {
+  background-color: #464545;
+  padding: 10px 5%; /* Use percentage for padding to scale with screen size */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.social-icons {
+  display: flex;
+  flex-grow: 1; /* Allow social icons to stretch as the screen grows */
+  justify-content: flex-start;
+  gap: 10px; /* Use gap to space items */
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #fff;
+  color: #464545;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 2; /* Allow contact info section to grow more than social icons */
+  justify-content: flex-end; /* Align items to the right */
+  flex-wrap: wrap;
+  gap: 20px; /* Add spacing between items */
+}
+
+.contact-item {
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contact-item svg {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.contact-item:hover {
+  text-decoration: underline;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 1024px) {
+  .contact-bar {
+    padding: 20px 5%; /* Increase padding for medium screens */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align on smaller screens */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center icons on smaller screens */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .contact-info {
+    justify-content: center; /* Center contact info on smaller screens */
+  }
+
+  .contact-item {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-bar {
+    padding: 30px 5%; /* Further increase padding for smaller screens */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Reduce icon size for small screens */
+    padding: 4px;
+  }
+
+  .contact-item {
+    font-size: 12px; /* Reduce font size even more for very small screens */
+  }
+}
+
+/* AboutUS CSS------------->>>>>>>>>>>>>>>>> */
+/* App.css */
+
+/* General container styles */
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f0f8ff; /* Very light blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Heading (h1) - "About Me" */
+.about-heading {
+  color: #333; /* Black color by default */
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: bold;
+  padding: 10px; /* Add padding for the box effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border-radius: 8px; /* Rounded corners for the box effect */
+  display: inline-block; /* Ensure padding and border-radius apply correctly */
+}
+
+.about-heading:hover {
+  color: #fff; /* White text color on hover */
+  background-color: #007bff; /* Light blue background on hover */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Box shadow effect */
+}
+
+/* Subheadings (h2) */
+.about-container h2 {
+  color: #333; /* Black color by default */
+  font-size: 2rem;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Hover effect for subheadings */
+.about-container h2:hover {
+  color: #007bff; /* Light blue color on hover */
+  transform: translateY(-5px);
+}
+
+.about-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff; /* Light blue underline */
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.about-container h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Specific styling for the subheading */
+.subheading {
+  color: #333; /* Black color by default */
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  padding: 10px; /* Add padding for the box effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border-radius: 8px; /* Rounded corners for the box effect */
+  display: inline-block; /* Ensure padding and border-radius apply correctly */
+}
+
+.subheading:hover {
+  color: #fff; /* White text color on hover */
+  background-color: #007bff; /* Light blue background on hover */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Box shadow effect */
+}
+
+/* Hover effects for list items */
+.about-container ul li {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-container ul li:hover {
+  color: #0056b3; /* Darker blue for hover */
+  transform: scale(1.05);
+}
+
+/* Hover effects for sections */
+.about-container section {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly white with opacity */
+  border: 1px solid #e0e0e0; /* Light border color */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-container section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+/* Hover effects for reasons */
+.reasons .reason {
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  background-color: #ffffff; /* White background */
+}
+
+.reasons .reason:hover {
+  background-color: #e6f0ff; /* Very light blue background for hover */
+  transform: scale(1.02);
+}
+
+/* Light blue text for paragraphs and lists */
+.about-container p,
+.about-container ul li {
+  color: #333; /* Darker text color for readability */
+}
+
+.about-container p,
+.about-container ul {
+  background: rgba(255, 255, 255, 0.6); /* Light background for text areas */
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 0 15px 0;
+}
+/* CSS for "Shuaib Akhter" with hover effect */
+.highlight-text {
+  color: #333; /* Black color by default */
+  font-weight: bold;
+  padding: 5px; /* Padding for the box effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border-radius: 4px; /* Rounded corners for the box effect */
+  display: inline-block; /* Ensure padding and border-radius apply correctly */
+}
+
+.highlight-text:hover {
+  color: #fff; /* White text color on hover */
+  background-color: #007bff; /* Light blue background on hover */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Box shadow effect */
+}
+/* CSS for About Me heading with border expansion effect on hover */
+.about-heading {
+  color: #333; /* Default text color */
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: bold;
+  padding: 10px 20px; /* Padding for spacing */
+  position: relative; /* For positioning the border effect */
+  display: inline-block; /* Ensures padding and border are applied correctly */
+  border-top-right-radius: 10px; /* Initial border-radius */
+  border-bottom-left-radius: 10px; /* Initial border-radius */
+  background: white; /* Background color for the button-like effect */
+  transition: all 1s; /* Smooth transition for all properties */
+}
+
+.about-heading::before,
+.about-heading::after {
+  content: "";
+  position: absolute;
+  border: 0px solid black; /* Initial border settings */
+  transition: all 1s; /* Smooth transition for border */
+}
+
+.about-heading::before {
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.about-heading::after {
+  bottom: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.about-heading:hover {
+  border-top-right-radius: 0; /* Remove border-radius on hover */
+  border-bottom-left-radius: 0; /* Remove border-radius on hover */
+  background: rgba(0, 0, 0, 0.5); /* Optional background color change */
+  color: white; /* Optional text color change */
+}
+
+.about-heading:hover::before,
+.about-heading:hover::after {
+  width: 100%; /* Expand border width to cover the heading */
+  height: 100%; /* Expand border height to cover the heading */
+  border-color: white; /* Change border color on hover */
+}
+
+/* About Shuaib CSS ------------>>>>>>>>>>>>>*/
+.about-shuaib {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a2a7ba;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-info h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  line-height: 1.5;
+}
